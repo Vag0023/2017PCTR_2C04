@@ -10,9 +10,23 @@ public class Club {
 	}
 
 	public void reservar(int pelotas, int palos) {
-		numPelotasIniciales-=pelotas;
-		numPalosIniciales-=palos;
-		checkPostCondicion();
+		int a=1;
+		while(a!=0){
+			if(numPelotasIniciales < pelotas || numPalosIniciales < palos){
+				try {
+					wait();
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				}else{
+				
+				numPelotasIniciales-=pelotas;
+				numPalosIniciales-=palos;
+				checkPostCondicion();
+				a=0;
+				}
+			}
 	}
 
 	public void devolver(int pelotas, int palos) {
