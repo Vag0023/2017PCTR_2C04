@@ -12,9 +12,10 @@ public class Simulador {
 		Club clubA=new Club(NUM_PELOTAS,NUM_PALOS);
 		///ExecutorService exec=Executors.newSingleThreadExecutor();
 		for (int i = 0; i < 14; i++) {
-			Thread jugador= new Thread(new Jugador(i,true,NUM_VUELTAS,clubA));
+			//Thread jugador= new Thread(new Jugador(i,true,NUM_VUELTAS,clubA));
 			//exec.execute(new  Jugador(i,true,NUM_VUELTAS,clubA));
-			jugador.start();
+			//jugador.start();
+			new Jugador(i,true,NUM_VUELTAS,clubA).start();
 		}
 	}
 }

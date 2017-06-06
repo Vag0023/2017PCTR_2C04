@@ -6,4 +6,14 @@ public class Club {
 		// TODO Auto-generated constructor stub
 	}
 
+	public void reservar(int pelotas, int palos) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void devolver(int pelotas, int palos) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }
