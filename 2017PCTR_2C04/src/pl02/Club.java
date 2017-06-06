@@ -9,7 +9,7 @@ public class Club {
 		this.numPalosMax=numPalosIniciales;
 	}
 
-	public void reservar(int pelotas, int palos) {
+	public  synchronized void reservar(int pelotas, int palos) {
 		int a=1;
 		while(a!=0){
 			if(numPelotasIniciales < pelotas || numPalosIniciales < palos){
@@ -29,7 +29,7 @@ public class Club {
 			}
 	}
 
-	public void devolver(int pelotas, int palos) {
+	public synchronized void devolver(int pelotas, int palos) {
 		numPelotasIniciales+=pelotas;
 		numPalosIniciales+=palos;
 		checkPostCondicion();
