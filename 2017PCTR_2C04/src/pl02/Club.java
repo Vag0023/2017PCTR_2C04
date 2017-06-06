@@ -12,12 +12,18 @@ public class Club {
 	public void reservar(int pelotas, int palos) {
 		numPelotasIniciales-=pelotas;
 		numPalosIniciales-=palos;
+		checkPostCondicion();
 	}
 
 	public void devolver(int pelotas, int palos) {
 		numPelotasIniciales+=pelotas;
 		numPalosIniciales+=palos;
-		
+		checkPostCondicion();
 	}
-
+	private void checkPostCondicion(){
+		assert  numPelotasIniciales <= numPelotasMax : "Supera la capacidad pelotas";
+		assert  numPelotasIniciales >= 0 : "capacidad pelotas";
+		assert numPalosIniciales >= 0 : " capacidad palos";
+		assert numPalosIniciales <= numPalosMax : "Supera la capacidad palos";
+	}
 }
