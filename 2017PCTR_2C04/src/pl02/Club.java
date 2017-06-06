@@ -33,6 +33,7 @@ public class Club {
 		numPelotasIniciales+=pelotas;
 		numPalosIniciales+=palos;
 		checkPostCondicion();
+		notify();
 	}
 	private void checkPostCondicion(){
 		assert  numPelotasIniciales <= numPelotasMax : "Supera la capacidad pelotas";
