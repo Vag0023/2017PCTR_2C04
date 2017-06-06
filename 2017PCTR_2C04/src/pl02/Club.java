@@ -1,18 +1,22 @@
 package pl02;
 
 public class Club {
-
-	public Club(int nUM_PELOTAS, int nUM_PALOS) {
-		// TODO Auto-generated constructor stub
+	private int numPelotasIniciales, numPalosIniciales,numPelotasMax, numPalosMax;
+	public Club(int numPelotasIniciales,int numPalosIniciales){
+		this.numPelotasIniciales=numPelotasIniciales;
+		this.numPalosIniciales=numPalosIniciales;
+		this.numPelotasMax=numPelotasIniciales;
+		this.numPalosMax=numPalosIniciales;
 	}
 
 	public void reservar(int pelotas, int palos) {
-		// TODO Auto-generated method stub
-		
+		numPelotasIniciales-=pelotas;
+		numPalosIniciales-=palos;
 	}
 
 	public void devolver(int pelotas, int palos) {
-		// TODO Auto-generated method stub
+		numPelotasIniciales+=pelotas;
+		numPalosIniciales+=palos;
 		
 	}
 
