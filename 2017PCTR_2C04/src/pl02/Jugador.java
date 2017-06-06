@@ -30,10 +30,22 @@ public class Jugador extends Thread implements Runnable{
 			System.out.println(id+"["+palos+","+pelotas+"] reserva ");
 			elClub.reservar(pelotas, palos);
 			System.out.println(id+"["+palos+","+pelotas+"] jugar ");
-			
+			try {
+				TimeUnit.MILLISECONDS.sleep(ThreadLocalRandom.current().nextInt(500, 1000 + 1));
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			System.out.println(id+"["+palos+","+pelotas+"] devolver ");
 			elClub.devolver(pelotas, palos);
 			System.out.println(id+"["+palos+","+pelotas+"] descansar ");
+			
+			try {
+				TimeUnit.MILLISECONDS.sleep(ThreadLocalRandom.current().nextInt(500, 1000 + 1));
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
 			//a=i;
 		}
 		//System.out.println(id+ "      "+a);
